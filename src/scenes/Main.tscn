@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bp5ohklepa61"]
 
 [ext_resource type="PackedScene" uid="uid://bykwi4gliymqr" path="res://src/scenes/player.tscn" id="1_x4os5"]
+[ext_resource type="PackedScene" uid="uid://dsnrkum4f57b1" path="res://src/interactive_items/ship_parts.tscn" id="2_8oy5r"]
+[ext_resource type="PackedScene" uid="uid://c35b0g0aekl00" path="res://src/interactive_items/crystal.tscn" id="2_akft7"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ajtct"]
 size = Vector3(10, 0.1, 10)
@@ -23,3 +25,9 @@ shape = SubResource("BoxShape3D_ketxm")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=867669253]
 transform = Transform3D(1, 0, 0, 0, 0.64278764, 0.76604444, 0, -0.76604444, 0.64278764, 0, 5.3367167, 0)
+
+[node name="Crystal" parent="." unique_id=466882147 instance=ExtResource("2_akft7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.408593, 0.5064626, 0)
+
+[node name="ship_parts" parent="." unique_id=1787755675 instance=ExtResource("2_8oy5r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67977476, 0)

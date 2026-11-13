@@ -1,4 +1,5 @@
 using Godot;
+using System.Collections.Generic;
 
 public partial class Player : CharacterBody3D
 {
@@ -8,12 +9,13 @@ public partial class Player : CharacterBody3D
 
 	private Node3D _head;
 	private RayCast3D _interactRay;
+	private Dictionary<string, int> _items = new();
 
 	public override void _Ready()
 	{
 		_head = GetNode<Node3D>("Head");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
-		_interactRay = GetNode<RayCast3D>("Head/Camera3d/InteractRay");
+		_interactRay = GetNode<RayCast3D>("Head/Camera3D/RayCast3D");
 	}
 
 	public override void _UnhandledInput(InputEvent @event)
@@ -66,4 +68,29 @@ public partial class Player : CharacterBody3D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+	public void AddItem(string id, int amount)
+	{
+		_items.TryGetValue(id, out int current);
+		_items[id] = current + amount;
+
+		//maybe delete this to show the items in an UI
+		GD.Print($"{id}: {_items[id]}");
+	}
+
+	public int GetItemCount(string id)
+	{
+		return _items.TryGetValue(id, out int count) ? count : 0;
+	}
+
+
+	//this method is for the ship to get rid of the items when i hande them over
+	public bool RemoveItem(string id, int amount)
+	{
+		if (GetItemCount(id) < amount)
+			return false;
+
+		_items[id] -= amount;
+		return true;
+	}	
 }
