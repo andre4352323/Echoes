@@ -84,3 +84,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.796, 0, -9.556)
 
 [node name="Player" parent="." unique_id=2050198370 instance=ExtResource("6_2lg1k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.826, 0, 10.534269)
+StealInterval = 5.0

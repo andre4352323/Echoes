@@ -2,10 +2,10 @@ using Godot;
 
 public partial class Enemy : CharacterBody3D
 {
-	[Export] public float Speed = 4.0f;         
-	[Export] public float DetectRange = 30.0f;  
-	[Export] public float StealRange = 2.0f;     
-	[Export] public float StealCooldown = 3.0f;  
+	[Export] public float Speed = 4.0f;          // player walks at 5, so you can outrun it
+	[Export] public float DetectRange = 30.0f;   // starts chasing inside this distance
+	[Export] public float StealRange = 2.0f;     // how close it must be to steal
+	[Export] public float StealCooldown = 3.0f;  // seconds between steals
 
 	private Player _player;
 	private double _cooldown;
@@ -14,14 +14,24 @@ public partial class Enemy : CharacterBody3D
 	{
 		_player = GetTree().GetFirstNodeInGroup("player") as Player;
 
-		// find the walk animation inside the imported model and loop it
+		// Find the walk animation, loop it, and remove forward movement so it plays in place.
 		var anim = FindChild("AnimationPlayer", true, false) as AnimationPlayer;
 		if (anim != null)
 		{
 			foreach (string animName in anim.GetAnimationList())
 			{
 				if (animName == "RESET") continue;
-				anim.GetAnimation(animName).LoopMode = Animation.LoopModeEnum.Linear;
+
+				Animation a = anim.GetAnimation(animName);
+				a.LoopMode = Animation.LoopModeEnum.Linear;
+
+				for (int i = a.GetTrackCount() - 1; i >= 0; i--)
+				{
+					if (a.TrackGetType(i) == Animation.TrackType.Position3D &&
+						a.TrackGetPath(i).ToString().EndsWith("Hips"))
+						a.RemoveTrack(i);
+				}
+
 				anim.Play(animName);
 				break;
 			}
@@ -40,7 +50,7 @@ public partial class Enemy : CharacterBody3D
 		toPlayer.Y = 0;
 		float dist = toPlayer.Length();
 
-		// chase while the player is in range but not already touching
+		// Chase while the player is in range but not already touching.
 		if (dist < DetectRange && dist > StealRange * 0.8f)
 		{
 			Vector3 dir = toPlayer.Normalized();
@@ -57,7 +67,7 @@ public partial class Enemy : CharacterBody3D
 		Velocity = velocity;
 		MoveAndSlide();
 
-		// steal one item when close enough and the cooldown is over
+		// Steal one item when close enough and the cooldown is over.
 		_cooldown -= delta;
 		if (dist <= StealRange && _cooldown <= 0)
 		{
