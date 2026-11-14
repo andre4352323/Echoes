@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cuh1f43qf3nyg" path="res://src/scenes/world/ship_zone.tscn" id="1_rr2wm"]
 [ext_resource type="PackedScene" uid="uid://bp5ohklepa61" path="res://src/scenes/world/hidden_zone.tscn" id="2_32aa5"]
 [ext_resource type="PackedScene" uid="uid://bt1tfjrpjxkb5" path="res://src/scenes/world/snow_zone.tscn" id="3_32aa5"]
+[ext_resource type="PackedScene" uid="uid://c2nufspophq4q" path="res://src/scenes/world/normal_zone1.tscn" id="4_5dlwx"]
 
 [node name="Main" type="Node3D" unique_id=1157797694]
 
@@ -11,6 +12,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.146545, 0, 0)
 
 [node name="hidden_zone" parent="." unique_id=755860694 instance=ExtResource("2_32aa5")]
 transform = Transform3D(-0.0011643022, 0, -0.9999993, 0, 1, 0, 0.9999993, 0, -0.0011643022, -90.79631, 0, -9.555645)
+visible = false
 
-[node name="NormalZone1" parent="." unique_id=1052065806 instance=ExtResource("3_32aa5")]
+[node name="snow_zone" parent="." unique_id=1052065806 instance=ExtResource("3_32aa5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.00437, 0, -59.954437)
+
+[node name="NormalZone2" parent="." unique_id=986061896 instance=ExtResource("4_5dlwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.796, 0, -9.556)
