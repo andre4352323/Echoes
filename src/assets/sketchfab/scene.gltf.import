@@ -1,0 +1,180 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bph1iu2wmyfyf"
+path="res://.godot/imported/scene.gltf-ca797502b98dbc7a01105463c85343d0.scn"
+
+[deps]
+
+source_file="res://src/assets/sketchfab/scene.gltf"
+dest_files=["res://.godot/imported/scene.gltf-ca797502b98dbc7a01105463c85343d0.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_01/SM_Cliffs_01_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_03/SM_Cliffs_03_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_06/SM_Cliffs_06_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_08/SM_Cliffs_08_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_09/SM_Cliffs_09_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_10/SM_Cliffs_10_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_11/SM_Cliffs_11_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_12/SM_Cliffs_12_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_13/SM_Cliffs_13_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_14/SM_Cliffs_14_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_15/SM_Cliffs_15_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_16/SM_Cliffs_16_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_17/SM_Cliffs_17_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Cliffs_18/SM_Cliffs_18_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Hills_01/SM_Hills_01_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Hills_02/SM_Hills_02_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Hills_03/SM_Hills_03_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Hills_04/SM_Hills_04_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Hills_05/SM_Hills_05_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Mountains_11/SM_Mountains_11_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Mountains_12/SM_Mountains_12_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Mountains_14/SM_Mountains_14_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Mountains_15/SM_Mountains_15_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_02/SM_Terrain_02_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_03/SM_Terrain_03_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_05/SM_Terrain_05_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_06/SM_Terrain_06_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_07/SM_Terrain_07_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_08/SM_Terrain_08_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_09/SM_Terrain_09_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_10/SM_Terrain_10_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_11/SM_Terrain_11_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/93c337d7b9a448f18e762d3dc9b1abe0_fbx/RootNode/SM_Terrain_12/SM_Terrain_12_Modular_Map_M_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://cuh1f43qf3nyg"]
 
-[ext_resource type="PackedScene" uid="uid://djw8dfkfilxmc" path="res://src/scenes/props/spaceship.tscn" id="1_qb1li"]
+[ext_resource type="PackedScene" uid="uid://bph1iu2wmyfyf" path="res://src/assets/sketchfab/scene.gltf" id="1_phww6"]
+[ext_resource type="PackedScene" uid="uid://bykwi4gliymqr" path="res://src/scenes/Player/player.tscn" id="2_nlcry"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_da8l5"]
-size = Vector3(10, 0.1, 10)
+[sub_resource type="Environment" id="Environment_ostoq"]
+background_mode = 2
+ambient_light_source = 3
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_a5g6d"]
-size = Vector3(10, 0.1, 10)
+[node name="Node3D" type="Node3D" unique_id=167450703]
 
-[node name="ShipZone" type="Node3D" unique_id=845829168]
+[node name="Sketchfab_Scene" parent="." unique_id=909852872 instance=ExtResource("1_phww6")]
 
-[node name="floor" type="StaticBody3D" parent="." unique_id=373634429]
+[node name="Player" parent="Sketchfab_Scene" unique_id=2050198370 instance=ExtResource("2_nlcry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5081503, 4.3080745)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="floor" unique_id=31279138]
-mesh = SubResource("BoxMesh_da8l5")
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1549926414]
+transform = Transform3D(1, 0, 0, 0, 0.64278764, 0.76604444, 0, -0.76604444, 0.64278764, 0, 2.9828768, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=473218980]
-shape = SubResource("BoxShape3D_a5g6d")
-
-[node name="Spaceship_RaeTheRedPanda2" parent="." unique_id=374511695 instance=ExtResource("1_qb1li")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1777488292]
+environment = SubResource("Environment_ostoq")

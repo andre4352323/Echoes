@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public partial class Player : CharacterBody3D
 {
-	[Export] public float Speed = 5.0f;
+	[Export] public float Speed = 3.0f;
 	[Export] public float JumpVelocity = 4.5f;
 	[Export] public float MouseSensitivity = 0.003f;
 
