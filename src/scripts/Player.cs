@@ -11,6 +11,8 @@ public partial class Player : CharacterBody3D
 	private RayCast3D _interactRay;
 	private Dictionary<string, int> _items = new();
 	private Label _promptLabel;
+	private Label _noticeLabel;
+	private Tween _noticeTween;
 
 	public override void _Ready()
 	{
@@ -18,6 +20,9 @@ public partial class Player : CharacterBody3D
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 		_interactRay = GetNode<RayCast3D>("Head/Camera3D/RayCast3D");
 		_promptLabel = GetNode<Label>("HUD/PromptLabel");
+		AddToGroup("player");
+		_noticeLabel = GetNode<Label>("HUD/NoticeLabel");
+		_noticeLabel.Modulate = new Color(1, 1, 1, 0);
 	}
 
 	public override void _UnhandledInput(InputEvent @event)
@@ -113,5 +118,33 @@ public partial class Player : CharacterBody3D
 			return $"[E] {target.Prompt}";
 
 		return "";
+	}
+
+
+		// removes 1 of a random item the player carries Returns its id, or null if empty
+	public string StealRandomItem()
+	{
+		var available = new List<string>();
+		foreach (var pair in _items)
+			if (pair.Value > 0)
+				available.Add(pair.Key);
+
+		if (available.Count == 0)
+			return null;
+
+		string id = available[GD.RandRange(0, available.Count - 1)];
+		_items[id] -= 1;
+		return id;
+	}
+
+	public void ShowNotice(string text)
+	{
+		_noticeLabel.Text = text;
+		_noticeLabel.Modulate = new Color(1, 1, 1, 1);
+
+		_noticeTween?.Kill();
+		_noticeTween = CreateTween();
+		_noticeTween.TweenInterval(1.5);
+		_noticeTween.TweenProperty(_noticeLabel, "modulate:a", 0.0f, 0.8f);
 	}
 }
