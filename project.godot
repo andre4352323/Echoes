@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GameJam"
-run/main_scene="res://src/scenes/player.tscn"
+run/main_scene="res://src/scenes/Player/player.tscn"
 config/features=PackedStringArray("4.7", "C#", "Mobile")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,15 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="GameJam"
+
+[file_customization]
+
+folder_colors={
+"res://src/": "pink",
+"res://src/assets/": "orange",
+"res://src/scenes/": "red",
+"res://src/scripts/": "purple"
+}
 
 [input]
 
