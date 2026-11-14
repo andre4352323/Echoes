@@ -10,12 +10,14 @@ public partial class Player : CharacterBody3D
 	private Node3D _head;
 	private RayCast3D _interactRay;
 	private Dictionary<string, int> _items = new();
+	private Label _promptLabel;
 
 	public override void _Ready()
 	{
 		_head = GetNode<Node3D>("Head");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 		_interactRay = GetNode<RayCast3D>("Head/Camera3D/RayCast3D");
+		_promptLabel = GetNode<Label>("HUD/PromptLabel");
 	}
 
 	public override void _UnhandledInput(InputEvent @event)
@@ -93,4 +95,23 @@ public partial class Player : CharacterBody3D
 		_items[id] -= amount;
 		return true;
 	}	
+
+		public override void _Process(double delta)
+	{
+		string text = GetInteractPrompt();
+		_promptLabel.Text = text;
+		_promptLabel.Visible = text != "";
+	}
+
+	private string GetInteractPrompt()
+	{
+		if (!_interactRay.IsColliding())
+			return "";
+
+		var hit = _interactRay.GetCollider();
+		if (GodotObject.IsInstanceValid(hit) && hit is Interactable target)
+			return $"[E] {target.Prompt}";
+
+		return "";
+	}
 }
