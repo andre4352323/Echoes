@@ -1,0 +1,21 @@
+[gd_resource type="Environment" format=3 uid="uid://b7xiib1y1h0jr"]
+
+[ext_resource type="Texture2D" uid="uid://0uo6n8wj4any" path="res://src/assets/skyes/addons/stylized_skies/panoramas/fantasy_ringed_giant.png" id="1_w1fde"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1"]
+panorama = ExtResource("1_w1fde")
+
+[sub_resource type="Sky" id="Sky_1"]
+sky_material = SubResource("PanoramaSkyMaterial_1")
+
+[resource]
+resource_name = "Ringed Giant (baked)"
+background_mode = 2
+sky = SubResource("Sky_1")
+ambient_light_source = 3
+ambient_light_energy = 0.8
+reflected_light_source = 2
+fog_enabled = true
+fog_light_color = Color(0.9647, 0.7843, 0.9098, 1)
+fog_density = 0.0012
+fog_sky_affect = 0.0

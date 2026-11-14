@@ -1,0 +1,20 @@
+[gd_resource type="Environment" load_steps=3 format=3]
+
+[ext_resource type="Material" path="res://addons/stylized_skies/presets/night_anime_night.tres" id="1_preset"]
+
+[sub_resource type="Sky" id="Sky_1"]
+sky_material = ExtResource("1_preset")
+process_mode = 2
+
+[resource]
+resource_name = "Anime Night (live)"
+background_mode = 2
+sky = SubResource("Sky_1")
+ambient_light_source = 3
+ambient_light_energy = 0.7
+reflected_light_source = 2
+tonemap_mode = 0
+fog_enabled = true
+fog_light_color = Color(0.3529, 0.5020, 0.8157, 1)
+fog_density = 0.0012
+fog_sky_affect = 0.0

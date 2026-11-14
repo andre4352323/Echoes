@@ -1,0 +1,45 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://addons/stylized_skies/shaders/stylized_sky.gdshader" id="1_sky"]
+
+[resource]
+resource_name = "Thunderstorm"
+shader = ExtResource("1_sky")
+shader_parameter/bank_coverage = 0.85
+shader_parameter/bank_haze = 0.15
+shader_parameter/bank_height = 1
+shader_parameter/bank_seed = 31
+shader_parameter/cloud_coverage = 0
+shader_parameter/cloud_light_color = Color(0.4510, 0.4824, 0.5490, 1)
+shader_parameter/cloud_rim = 0.5
+shader_parameter/cloud_rim_color = Color(0.7059, 0.7529, 0.8314, 1)
+shader_parameter/cloud_shading = 1.2
+shader_parameter/cloud_shadow_color = Color(0.1529, 0.1725, 0.2157, 1)
+shader_parameter/cloud_steps = 3
+shader_parameter/cloud_thickness = 0.25
+shader_parameter/cumulus_coverage = 0.9
+shader_parameter/cumulus_scale = 1.7
+shader_parameter/cumulus_seed = 31
+shader_parameter/ground_color = Color(0.1490, 0.1647, 0.1961, 1)
+shader_parameter/haze_amount = 0.45
+shader_parameter/haze_color = Color(0.3373, 0.3686, 0.4157, 1)
+shader_parameter/haze_height = 0.06
+shader_parameter/horizon_color = Color(0.4157, 0.4471, 0.5020, 1)
+shader_parameter/horizon_glow = 0
+shader_parameter/lightning_flash = 0.1
+shader_parameter/sky_color = Color(0.2275, 0.2588, 0.3137, 1)
+shader_parameter/sun_direction = Vector3(0.55667, 0.5, -0.66341)
+shader_parameter/sun_glow_color = Color(0.8471, 0.8627, 0.8863, 1)
+shader_parameter/sun_glow_intensity = 0.15
+shader_parameter/sun_glow_size = 0.5
+shader_parameter/sun_size = 0
+shader_parameter/zenith_color = Color(0.1490, 0.1725, 0.2196, 1)
+metadata/ambient_energy = 0.55
+metadata/category = "Weather"
+metadata/display_name = "Thunderstorm"
+metadata/fog_color = Color(0.3373, 0.3686, 0.4157, 1)
+metadata/light_color = Color(0.6627, 0.7020, 0.7686, 1)
+metadata/light_direction = Vector3(0.55667, 0.5, -0.66341)
+metadata/light_energy = 0.4
+metadata/view_pitch = 16
+metadata/view_yaw = 10

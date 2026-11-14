@@ -54,17 +54,21 @@ horizontal_alignment = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
+offset_left = -354.0
+offset_top = 43.0
+offset_right = -27.0
+offset_bottom = 133.0
 grow_horizontal = 0
 mouse_filter = 2
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
-[node name="Timer" type="Label" parent="HUD" unique_id=353075845]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="TimerLabel" type="Label" parent="HUD" unique_id=353075845]
+offset_left = 367.0
+offset_top = 164.0
+offset_right = 845.0
+offset_bottom = 241.0
 theme_override_colors/font_color = Color(0.5245685, 0, 0.06818339, 1)
 theme_override_font_sizes/font_size = 56
 horizontal_alignment = 1

@@ -1,0 +1,59 @@
+{
+ "categories": [
+  {
+   "category": "Dawn",
+   "skies": [
+    {
+     "name": "Golden Sunrise",
+     "slug": "dawn_golden_sunrise"
+    }
+   ]
+  },
+  {
+   "category": "Day",
+   "skies": [
+    {
+     "name": "Summer Puffs",
+     "slug": "day_summer_puffs"
+    }
+   ]
+  },
+  {
+   "category": "Sunset",
+   "skies": [
+    {
+     "name": "Golden Hour",
+     "slug": "sunset_golden_hour"
+    }
+   ]
+  },
+  {
+   "category": "Night",
+   "skies": [
+    {
+     "name": "Anime Night",
+     "slug": "night_anime_night"
+    }
+   ]
+  },
+  {
+   "category": "Weather",
+   "skies": [
+    {
+     "name": "Thunderstorm",
+     "slug": "weather_thunderstorm"
+    }
+   ]
+  },
+  {
+   "category": "Fantasy",
+   "skies": [
+    {
+     "name": "Ringed Giant",
+     "slug": "fantasy_ringed_giant"
+    }
+   ]
+  }
+ ],
+ "count": 6
+}

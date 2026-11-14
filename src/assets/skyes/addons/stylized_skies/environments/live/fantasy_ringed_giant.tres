@@ -1,0 +1,15 @@
+[gd_resource type="Environment" format=3 uid="uid://bvvaft3ck7tke"]
+
+[sub_resource type="Sky" id="Sky_3b83d"]
+
+[resource]
+resource_name = "Ringed Giant (live)"
+background_mode = 2
+sky = SubResource("Sky_3b83d")
+ambient_light_source = 3
+ambient_light_energy = 0.8
+reflected_light_source = 2
+fog_enabled = true
+fog_light_color = Color(0.9647, 0.7843, 0.9098, 1)
+fog_density = 0.0012
+fog_sky_affect = 0.0

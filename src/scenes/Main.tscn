@@ -1,21 +1,36 @@
 [gd_scene format=3 uid="uid://w3l04lfvqie5"]
 
+[ext_resource type="Script" uid="uid://bmgifb8rn6qg7" path="res://src/scenes/ViewManager.cs" id="1_dbro3"]
 [ext_resource type="PackedScene" uid="uid://cuh1f43qf3nyg" path="res://src/scenes/world/ship_zone.tscn" id="1_rr2wm"]
 [ext_resource type="PackedScene" uid="uid://bp5ohklepa61" path="res://src/scenes/world/hidden_zone.tscn" id="2_32aa5"]
 [ext_resource type="PackedScene" uid="uid://bt1tfjrpjxkb5" path="res://src/scenes/world/snow_zone.tscn" id="3_32aa5"]
 [ext_resource type="PackedScene" uid="uid://c2nufspophq4q" path="res://src/scenes/world/normal_zone1.tscn" id="4_5dlwx"]
+[ext_resource type="PackedScene" uid="uid://bykwi4gliymqr" path="res://src/scenes/Player/player.tscn" id="6_2lg1k"]
+[ext_resource type="Environment" uid="uid://b7xiib1y1h0jr" path="res://src/assets/skyes/addons/stylized_skies/environments/baked/fantasy_ringed_giant.tres" id="7_2lg1k"]
 
 [node name="Main" type="Node3D" unique_id=1157797694]
 
-[node name="Node3D" parent="." unique_id=167450703 instance=ExtResource("1_rr2wm")]
+[node name="ViewManager" type="Node3D" parent="." unique_id=1592680091 node_paths=PackedStringArray("PlayerNode", "NormalZones", "HiddenZones")]
+script = ExtResource("1_dbro3")
+PlayerNode = NodePath("../Player")
+NormalZones = [NodePath("../NormalZone2")]
+HiddenZones = [NodePath("../hidden_zone"), NodePath("../snow_zone")]
+ScanDuration = 45.0
+
+[node name="ship_zone" parent="." unique_id=167450703 instance=ExtResource("1_rr2wm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.146545, 0, 0)
 
 [node name="hidden_zone" parent="." unique_id=755860694 instance=ExtResource("2_32aa5")]
 transform = Transform3D(-0.0011643022, 0, -0.9999993, 0, 1, 0, 0.9999993, 0, -0.0011643022, -90.79631, 0, -9.555645)
-visible = false
 
 [node name="snow_zone" parent="." unique_id=1052065806 instance=ExtResource("3_32aa5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.00437, 0, -59.954437)
 
 [node name="NormalZone2" parent="." unique_id=986061896 instance=ExtResource("4_5dlwx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.796, 0, -9.556)
+
+[node name="Player" parent="." unique_id=2050198370 instance=ExtResource("6_2lg1k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.826, 0, 14.716)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=243732031]
+environment = ExtResource("7_2lg1k")
